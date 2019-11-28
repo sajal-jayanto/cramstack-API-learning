@@ -1,4 +1,4 @@
-package com.cramstack.cramstackAPIlearning.Authentication;
+package com.cramstack.cramstackAPIlearning.Models.Authentication;
 
 public class AuthenticationResponse {
 

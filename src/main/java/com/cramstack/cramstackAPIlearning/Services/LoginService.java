@@ -37,7 +37,6 @@ public class LoginService implements UserDetailsService {
         return userInformation(user);
     }
 
-
     private UserDetails userInformation(User user){
 
         return new UserDetails() {

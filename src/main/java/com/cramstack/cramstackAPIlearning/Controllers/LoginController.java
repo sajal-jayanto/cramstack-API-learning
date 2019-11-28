@@ -1,7 +1,7 @@
 package com.cramstack.cramstackAPIlearning.Controllers;
 
-import com.cramstack.cramstackAPIlearning.Authentication.AuthenticationRequest;
-import com.cramstack.cramstackAPIlearning.Authentication.AuthenticationResponse;
+import com.cramstack.cramstackAPIlearning.Models.Authentication.AuthenticationRequest;
+import com.cramstack.cramstackAPIlearning.Models.Authentication.AuthenticationResponse;
 import com.cramstack.cramstackAPIlearning.Services.LoginService;
 import com.cramstack.cramstackAPIlearning.Util.JwtUtil;
 import org.springframework.beans.factory.annotation.Autowired;
