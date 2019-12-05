@@ -20,11 +20,11 @@ public class JwtUtil {
         return extractClaim(token , Claims::getSubject);
     }
 
-    public Date extractExpiration(String token){
+    private Date extractExpiration(String token){
         return extractClaim(token , Claims::getExpiration);
     }
 
-    public <T> T extractClaim(String token , Function<Claims, T> claimsResolver){
+    private <T> T extractClaim(String token, Function<Claims, T> claimsResolver){
         final Claims claims = extractAllClaims(token);
         return claimsResolver.apply(claims);
     }
@@ -44,9 +44,8 @@ public class JwtUtil {
 
     private String createToken(Map<String, Object> claims, String username) {
         return Jwts.builder().setClaims(claims).setSubject(username).setIssuedAt(new Date(System.currentTimeMillis()))
-                .setExpiration(new Date(System.currentTimeMillis() + 1000 * 60 * 60 * 3))
+                .setExpiration(new Date(System.currentTimeMillis() + 1000 * 60 * 60))
                 .signWith(SignatureAlgorithm.HS256 , SECRET_KEY).compact();
-
     }
 
     public Boolean validateToken(String token , UserDetails userDetails){
