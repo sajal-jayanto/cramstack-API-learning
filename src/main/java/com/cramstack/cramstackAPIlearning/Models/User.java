@@ -37,6 +37,17 @@ public class User {
         this.password = password;
     }
 
+    public Integer getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getDesignation() {
+        return designation;
+    }
 
     public void setId(Integer id) {
         this.id = id;
@@ -53,7 +64,6 @@ public class User {
     public void setEmail(String email) {
         this.email = email;
     }
-
 
     public void setDesignation(String designation) {
         this.designation = designation;
